@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmKin | Contact & Teaming</title>
+    <title>Omkin | Advanced GovCon Solutions & Federal AI Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -11,127 +11,107 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#0b192c',
-                        electricBlue: '#0066ff',
-                        brightCyan: '#00d2ff',
-                        slateDark: '#1e293b'
+                        brand: {
+                            DEFAULT: '#0b192c',
+                            dark: '#050d18',
+                            light: '#1e3e62',
+                            accent: '#00a8cc'
+                        }
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-electricBlue selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-brand-dark text-gray-100 font-sans antialiased flex flex-col min-h-screen">
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur border-b border-slate-800 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="OmKin Logo" class="h-10 sm:h-12 w-auto object-contain rounded bg-white/5 p-1" onerror="this.src='https://placehold.co/150x50/0b192c/ffffff?text=OmKin'">
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-brightCyan transition text-slate-300">Home</a>
-                <a href="capabilities.html" class="hover:text-brightCyan transition text-slate-300">Capabilities</a>
-                <a href="about.html" class="hover:text-brightCyan transition text-slate-300">About Us</a>
-                <a href="compliance.html" class="hover:text-brightCyan transition text-slate-300">GovCon Compliance</a>
-                <a href="contact.html" class="text-brightCyan transition">Contact & Teaming</a>
-            </nav>
-            <div class="hidden lg:flex items-center gap-3 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-mono">
-                <span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
-                <span class="text-slate-400">UEI: <strong class="text-slate-200">PENDING</strong></span>
-                <span class="text-slate-600">|</span>
-                <span class="text-slate-400">CAGE: <strong class="text-slate-200">PENDING</strong></span>
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-brand/95 backdrop-blur border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="Omkin.jpeg" alt="OmKin Logo" class="h-10 sm:h-12 w-auto object-contain rounded bg-white/5 p-1" onerror="this.src='https://placehold.co/150x50/0b192c/ffffff?text=OmKin'">
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+                    <a href="index.html" class="text-brand-accent transition-colors">Home</a>
+                    <a href="home.html" class="text-gray-300 hover:text-brand-accent transition-colors">Overview</a>
+                    <a href="solutions.html" class="text-gray-300 hover:text-brand-accent transition-colors">Solutions</a>
+                    <a href="capabilities.html" class="text-gray-300 hover:text-brand-accent transition-colors">Capabilities</a>
+                    <a href="careers.html" class="text-gray-300 hover:text-brand-accent transition-colors">Careers</a>
+                    <a href="about.html" class="text-gray-300 hover:text-brand-accent transition-colors">About Us</a>
+                    <a href="compliance.html" class="text-gray-300 hover:text-brand-accent transition-colors">Compliance</a>
+                    <a href="contact.html" class="bg-brand-accent hover:bg-cyan-500 text-brand-dark font-semibold px-4 py-2 rounded-lg transition-colors">Contact & Teaming</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-white p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
             </div>
-            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-navy border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="index.html" class="block w-full text-left text-slate-300 hover:text-white py-1">Home</a>
-            <a href="capabilities.html" class="block w-full text-left text-slate-300 hover:text-white py-1">Capabilities</a>
-            <a href="about.html" class="block w-full text-left text-slate-300 hover:text-white py-1">About Us</a>
-            <a href="compliance.html" class="block w-full text-left text-slate-300 hover:text-white py-1">GovCon Compliance</a>
-            <a href="contact.html" class="block w-full text-left text-slate-300 hover:text-white py-1">Contact & Teaming</a>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block text-brand-accent font-medium py-1">Home</a>
+            <a href="home.html" class="block text-gray-300 hover:text-brand-accent py-1">Overview</a>
+            <a href="solutions.html" class="block text-gray-300 hover:text-brand-accent py-1">Solutions</a>
+            <a href="capabilities.html" class="block text-gray-300 hover:text-brand-accent py-1">Capabilities</a>
+            <a href="careers.html" class="block text-gray-300 hover:text-brand-accent py-1">Careers</a>
+            <a href="about.html" class="block text-gray-300 hover:text-brand-accent py-1">About Us</a>
+            <a href="compliance.html" class="block text-gray-300 hover:text-brand-accent py-1">Compliance</a>
+            <a href="contact.html" class="block bg-brand-accent text-brand-dark text-center font-semibold py-2 rounded-lg mt-2">Contact & Teaming</a>
         </div>
     </header>
 
-    <main class="flex-grow pt-20">
-        <section class="py-24 bg-slate-950">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-xs font-mono uppercase tracking-widest text-brightCyan mb-3">contact.html</h2>
-                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Connect With Our GovCon Team</h3>
-                    <p class="text-slate-400">
-                        Reach out for capability statements, teaming partnerships, or RFP/RFQ inquiries. Form submissions route directly to your business inbox.
-                    </p>
-                </div>
-
-                <!-- Web3Forms integration configured for direct inbox delivery -->
-                <form action="https://api.web3forms.com/submit" method="POST" class="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-xl">
-                    <!-- Replace with your free Web3Forms access key generated at web3forms.com -->
-                    <input type="hidden" name="access_key" value="0a416d5f-948d-4514-b267-9a915c6cb2b9">
-                    <input type="hidden" name="subject" value="New Teaming Inquiry from OmKin Website">
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Full Name</label>
-                            <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-electricBlue transition" placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Agency / Organization</label>
-                            <input type="text" name="organization" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-electricBlue transition" placeholder="Prime Contractor / Agency">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
-                            <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-electricBlue transition" placeholder="johndoe@omkin.us">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Inquiry Type</label>
-                            <select name="inquiry_type" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-electricBlue transition">
-                                <option>Teaming Partnership</option>
-                                <option>RFP / RFQ Response</option>
-                                <option>Capabilities Statement Request</option>
-                                <option>General Inquiry</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="mb-6">
-                        <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Inquiry Details / Teaming Interest</label>
-                        <textarea name="message" rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-electricBlue transition" placeholder="Provide contract vehicle or solicitation details..."></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-4 rounded-xl bg-electricBlue hover:bg-blue-600 text-white font-semibold shadow-lg shadow-electricBlue/20 transition cursor-pointer">
-                        Submit Inquiry & Send Email
-                    </button>
-                </form>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-brand to-brand-dark py-24 lg:py-32 overflow-hidden flex-grow">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#00a8cc_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block bg-brand-accent/10 text-brand-accent border border-brand-accent/30 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-6">
+                Federal Contracting & Defense Tech Partner
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+                Engineering Mission-Critical Intelligence for <span class="text-brand-accent">Federal Agencies</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Omkin delivers resilient AI systems, advanced software architecture, and specialized engineering support to empower defense, intelligence, and civilian programs.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="capabilities.html" class="bg-brand-accent hover:bg-cyan-500 text-brand-dark font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-cyan-500/20">
+                    Explore Capabilities
+                </a>
+                <a href="contact.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-4 rounded-xl transition-all">
+                    Teaming Inquiries
+                </a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="bg-navy border-t border-slate-800 py-12 text-slate-400 text-sm">
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-white/10 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-3">
-                <img src="logo.png" alt="OmKin Logo" class="h-8 w-auto object-contain bg-white/5 p-1 rounded" onerror="this.src='https://placehold.co/120x40/0b192c/ffffff?text=OmKin'">
-                <span class="text-xs font-mono">© 2026 OmKin LLC. All rights reserved.</span>
+                <img src="Omkin.jpeg" alt="OmKin Logo" class="h-8 w-auto object-contain rounded bg-white/5 p-1" onerror="this.src='https://placehold.co/120x40/0b192c/ffffff?text=OmKin'">
+                <span class="text-sm text-gray-400">&copy; 2026 Omkin, LLC. All rights reserved.</span>
             </div>
-            <div class="flex gap-6 text-xs font-mono">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="capabilities.html" class="hover:text-white transition">Capabilities</a>
-                <a href="about.html" class="hover:text-white transition">About Us</a>
-                <a href="compliance.html" class="hover:text-white transition">Compliance</a>
-                <a href="contact.html" class="hover:text-white transition">Teaming</a>
+            <div class="flex flex-wrap gap-6 text-sm text-gray-400">
+                <a href="index.html" class="hover:text-brand-accent">Home</a>
+                <a href="solutions.html" class="hover:text-brand-accent">Solutions</a>
+                <a href="capabilities.html" class="hover:text-brand-accent">Capabilities</a>
+                <a href="compliance.html" class="hover:text-brand-accent">Compliance</a>
+                <a href="contact.html" class="hover:text-brand-accent">Contact</a>
             </div>
         </div>
     </footer>
 
     <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>

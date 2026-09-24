@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmKin | GovCon Compliance</title>
+    <title>Overview | Omkin GovCon Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -11,117 +11,80 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#0b192c',
-                        electricBlue: '#0066ff',
-                        brightCyan: '#00d2ff',
-                        slateDark: '#1e293b'
+                        brand: {
+                            DEFAULT: '#0b192c',
+                            dark: '#050d18',
+                            light: '#1e3e62',
+                            accent: '#00a8cc'
+                        }
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-electricBlue selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-brand-dark text-gray-100 font-sans antialiased flex flex-col min-h-screen">
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur border-b border-slate-800 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="OmKin Logo" class="h-10 sm:h-12 w-auto object-contain rounded bg-white/5 p-1" onerror="this.src='https://placehold.co/150x50/0b192c/ffffff?text=OmKin'">
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-brightCyan transition text-slate-300">Home</a>
-                <a href="capabilities.html" class="hover:text-brightCyan transition text-slate-300">Capabilities</a>
-                <a href="about.html" class="hover:text-brightCyan transition text-slate-300">About Us</a>
-                <a href="compliance.html" class="text-brightCyan transition">GovCon Compliance</a>
-                <a href="contact.html" class="hover:text-brightCyan transition text-slate-300">Contact & Teaming</a>
-            </nav>
-            <div class="hidden lg:flex items-center gap-3 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-mono">
-                <span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
-                <span class="text-slate-400">UEI: <strong class="text-slate-200">PENDING</strong></span>
-                <span class="text-slate-600">|</span>
-                <span class="text-slate-400">CAGE: <strong class="text-slate-200">PENDING</strong></span>
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-brand/95 backdrop-blur border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="Omkin.jpeg" alt="OmKin Logo" class="h-10 sm:h-12 w-auto object-contain rounded bg-white/5 p-1" onerror="this.src='https://placehold.co/150x50/0b192c/ffffff?text=OmKin'">
+                </a>
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+                    <a href="index.html" class="text-gray-300 hover:text-brand-accent transition-colors">Home</a>
+                    <a href="home.html" class="text-brand-accent transition-colors">Overview</a>
+                    <a href="solutions.html" class="text-gray-300 hover:text-brand-accent transition-colors">Solutions</a>
+                    <a href="capabilities.html" class="text-gray-300 hover:text-brand-accent transition-colors">Capabilities</a>
+                    <a href="careers.html" class="text-gray-300 hover:text-brand-accent transition-colors">Careers</a>
+                    <a href="about.html" class="text-gray-300 hover:text-brand-accent transition-colors">About Us</a>
+                    <a href="compliance.html" class="text-gray-300 hover:text-brand-accent transition-colors">Compliance</a>
+                    <a href="contact.html" class="bg-brand-accent hover:bg-cyan-500 text-brand-dark font-semibold px-4 py-2 rounded-lg transition-colors">Contact & Teaming</a>
+                </nav>
             </div>
-            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-navy border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="index.html" class="block w-full text-left text-slate-300 hover:text-white py-1">Home</a>
-            <a href="capabilities.html" class="block w-full text-left text-slate-300 hover:text-white py-1">Capabilities</a>
-            <a href="about.html" class="block w-full text-left text-slate-300 hover:text-white py-1">About Us</a>
-            <a href="compliance.html" class="block w-full text-left text-slate-300 hover:text-white py-1">GovCon Compliance</a>
-            <a href="contact.html" class="block w-full text-left text-slate-300 hover:text-white py-1">Contact & Teaming</a>
         </div>
     </header>
 
-    <main class="flex-grow pt-20">
-        <section class="py-24 bg-slate-950">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-xs font-mono uppercase tracking-widest text-brightCyan mb-3">compliance.html</h2>
-                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">GovCon Compliance & Credentials</h3>
-                    <p class="text-slate-400 text-base sm:text-lg">
-                        Transparent corporate identifiers and regulatory alignment prepared for contracting officers and prime partners.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="p-8 bg-slate-900 border border-slate-800 rounded-2xl">
-                        <div class="text-brightCyan font-mono text-sm mb-2">IDENTIFIER STATUS</div>
-                        <h4 class="text-2xl font-bold text-white mb-4">CAGE & UEI Registry</h4>
-                        <p class="text-slate-400 text-sm mb-6">OmKin is currently finalizing federal system registrations to support direct prime awards and streamlined subcontractor teaming agreements.</p>
-                        <div class="space-y-3 font-mono text-xs">
-                            <div class="flex justify-between py-2 border-b border-slate-800">
-                                <span class="text-slate-400">CAGE Code:</span>
-                                <span class="text-brightCyan font-bold">Pending Registration</span>
-                            </div>
-                            <div class="flex justify-between py-2 border-b border-slate-800">
-                                <span class="text-slate-400">UEI Number:</span>
-                                <span class="text-brightCyan font-bold">Pending Validation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-8 bg-slate-900 border border-slate-800 rounded-2xl">
-                        <div class="text-brightCyan font-mono text-sm mb-2">CLASSIFICATION</div>
-                        <h4 class="text-2xl font-bold text-white mb-4">NAICS & Vehicle Readiness</h4>
-                        <p class="text-slate-400 text-sm mb-6">Aligned with key federal technology acquisition codes for custom software engineering and computer systems design.</p>
-                        <div class="space-y-3 font-mono text-xs">
-                            <div class="flex justify-between py-2 border-b border-slate-800">
-                                <span class="text-slate-400">Primary NAICS 541511:</span>
-                                <span class="text-slate-200">Custom Computer Programming</span>
-                            </div>
-                            <div class="flex justify-between py-2 border-b border-slate-800">
-                                <span class="text-slate-400">Secondary NAICS 541512:</span>
-                                <span class="text-slate-200">Computer Systems Design</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Content Section -->
+    <main class="flex-grow py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">Company Overview</h1>
+        <p class="text-lg text-gray-300 mb-8 max-w-3xl">
+            Omkin is engineered from the ground up to support federal agencies and prime contractors with mission-ready technical execution, stringent compliance frameworks, and resilient defense-grade automation.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand p-6 rounded-xl border border-white/10">
+                <div class="text-brand-accent text-3xl mb-4"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="text-xl font-bold mb-2">Cleared Excellence</h3>
+                <p class="text-gray-400 text-sm">Operated by seasoned engineering executives with active clearances and deep domain expertise in defense systems.</p>
             </div>
-        </section>
+            <div class="bg-brand p-6 rounded-xl border border-white/10">
+                <div class="text-brand-accent text-3xl mb-4"><i class="fa-solid fa-microchip"></i></div>
+                <h3 class="text-xl font-bold mb-2">AI-Driven Operations</h3>
+                <p class="text-gray-400 text-sm">Deploying secure artificial intelligence and machine learning architectures designed to accelerate federal decision-making.</p>
+            </div>
+            <div class="bg-brand p-6 rounded-xl border border-white/10">
+                <div class="text-brand-accent text-3xl mb-4"><i class="fa-solid fa-handshake"></i></div>
+                <h3 class="text-xl font-bold mb-2">Prime & Sub Teaming</h3>
+                <p class="text-gray-400 text-sm">Flexible partnership models built to integrate seamlessly into large-scale prime contracts and IDIQs.</p>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-navy border-t border-slate-800 py-12 text-slate-400 text-sm">
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-white/10 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-3">
-                <img src="logo.png" alt="OmKin Logo" class="h-8 w-auto object-contain bg-white/5 p-1 rounded" onerror="this.src='https://placehold.co/120x40/0b192c/ffffff?text=OmKin'">
-                <span class="text-xs font-mono">© 2026 OmKin LLC. All rights reserved.</span>
+                <img src="Omkin.jpeg" alt="OmKin Logo" class="h-8 w-auto object-contain rounded bg-white/5 p-1" onerror="this.src='https://placehold.co/120x40/0b192c/ffffff?text=OmKin'">
+                <span class="text-sm text-gray-400">&copy; 2026 Omkin, LLC. All rights reserved.</span>
             </div>
-            <div class="flex gap-6 text-xs font-mono">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="capabilities.html" class="hover:text-white transition">Capabilities</a>
-                <a href="about.html" class="hover:text-white transition">About Us</a>
-                <a href="compliance.html" class="hover:text-white transition">Compliance</a>
-                <a href="contact.html" class="hover:text-white transition">Teaming</a>
+            <div class="flex flex-wrap gap-6 text-sm text-gray-400">
+                <a href="index.html" class="hover:text-brand-accent">Home</a>
+                <a href="home.html" class="hover:text-brand-accent">Overview</a>
+                <a href="solutions.html" class="hover:text-brand-accent">Solutions</a>
+                <a href="contact.html" class="hover:text-brand-accent">Contact</a>
             </div>
         </div>
     </footer>
-
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-    </script>
 </body>
 </html>
